@@ -1,0 +1,45 @@
+# Image Slider
+
+A custom image slider built with vanilla HTML, CSS, and JavaScript. No libraries or carousel plugins.
+
+**Live demo:** https://d1ps0n.github.io/Image-Slider/
+
+## Features
+
+- Previous and Next arrow buttons on the left and right edges of the viewing window
+- Dynamically generated indicator dots that update with the active slide
+- Clickable dots that jump straight to any image
+- Smooth horizontal sliding using `transform: translateX()` and CSS `transition`
+- Seamless looping in both directions (Next on the last slide and Previous on the first)
+- Responsive layout that scales with the container and screen size
+- Images keep their aspect ratio with `object-fit: cover`
+- Keyboard support with the left and right arrow keys
+
+## Project structure
+
+```
+Image-Slider/
+├── index.html    # Slider markup and sample images
+├── style.css     # Layout, sliding track, controls, responsive rules
+├── slider.js     # ImageSlider class: indexing, events, loop logic
+└── Images/       # Sample photos
+```
+
+## How it works
+
+- The slides sit in a flex track inside a viewport with `overflow: hidden`, and the track moves with `translateX()`.
+- JavaScript adds a clone of the last slide at the start and a clone of the first slide at the end. After the animation lands on a clone, the track snaps to the matching real slide with no transition, which creates the endless loop.
+- Clicks that arrive during an animation are queued, so fast clicking doesn't break the slider.
+
+## Run locally
+
+1. Download or clone the repository.
+2. Open `index.html` in a browser.
+
+## Built with
+
+HTML5, CSS3, and JavaScript (ES6 classes)
+
+## Author
+
+<Your name>, <Course name and number>

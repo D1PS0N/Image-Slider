@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Photo Gallery Slider</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <h1>My Photo Gallery Slider</h1>
+      <p>Week 4 project: a custom image slider with smooth sliding and endless looping</p>
+    </header>
+
+    <section class="slider" id="image-slider" aria-roledescription="carousel" aria-label="Photo gallery slider">
+
+      <div class="slider-viewport">
+        <ul class="slider-track" id="sliderTrack">
+          <li class="slide">
+            <img src="images/image%201.jpg" alt="Sun setting over calm water" />
+            <p class="slide-caption">Sunset over the water</p>
+          </li>
+          <li class="slide">
+            <img src="images/image%202.jpg" alt="Gallery photo 2" />
+            <p class="slide-caption">Gallery photo 2</p>
+          </li>
+          <li class="slide">
+            <img src="images/image%203.jpg" alt="Gallery photo 3" />
+            <p class="slide-caption">Gallery photo 3</p>
+          </li>
+          <li class="slide">
+            <img src="images/image%204.jpg" alt="Gallery photo 4" />
+            <p class="slide-caption">Gallery photo 4</p>
+          </li>
+          <li class="slide">
+            <img src="images/image%205.jpg" alt="Gallery photo 5" />
+            <p class="slide-caption">Gallery photo 5</p>
+          </li>
+        </ul>
+      </div>
+
+      <button class="slider-arrow slider-arrow--prev" id="prevBtn" type="button" aria-label="Previous slide">&#10094;</button>
+      <button class="slider-arrow slider-arrow--next" id="nextBtn" type="button" aria-label="Next slide">&#10095;</button>
+
+      <!-- Indicator dots are generated dynamically by slider.js -->
+      <div class="slider-dots" id="sliderDots" aria-label="Choose slide"></div>
+
+    </section>
+  </main>
+
+  <script src="slider.js"></script>
+</body>
+</html>
